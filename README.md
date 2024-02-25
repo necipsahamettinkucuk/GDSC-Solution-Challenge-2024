@@ -1,0 +1,2 @@
+# GDSC-Solution-Challenge-2024
+FOREST FIRE DETECTION
