@@ -48,7 +48,7 @@ class Model:
         frame = box_annotator.annotate(scene=frame, detections=detections[alandakiler], labels=labels, skip_label=None)
         frame = zone_annotator.annotate(scene=frame)    # Sadece bu kısmı yorum satına alarakta yapabiliriz
 
-        # sayısını yazdırma
+        # printing the number of visible objects in the upper left corner
         cv2.putText(frame, str(sayi), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
 
