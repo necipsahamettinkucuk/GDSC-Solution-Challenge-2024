@@ -8,5 +8,7 @@ Ask an IT person in the company for the "IP, username, password" information of 
 Then replace "ai = AI.Model("best.pt")" <b>best.pt</b> with <b>yolov8s.pt</b> in line 18 of main.<br>![image](https://github.com/necipsahamettinkucuk/GDSC-Solution-Challenge-2024/assets/121046682/14faaefb-343b-4556-95b2-6f725c2c192c) <br>
 
 After these edits, run the main.py file. After this is done, you will see the number of objects in the place where the IP camera sees and you will see it.<br><br>
-If you don't have a UAV, you can connect to any IP camera. If you train the data set I created in Colab and use that weight, you can detect fire. Or you can directly download the yolov8s weight and detect objects such as people, tables, books with the yolo weight trained with the COCO data set.
+If you don't have a UAV, you can connect to any IP camera. If you train the data set I created in Colab and use that weight, you can detect fire. Or you can directly download the yolov8s weight and detect objects such as people, tables, books with the yolo weight trained with the COCO data set. <br><br>
+
+[dowload yolov8 weight] (https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8s.pt)
 
