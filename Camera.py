@@ -1,17 +1,15 @@
-# Kamerea konfigürason, kamera işlemleri
+
 import cv2
 class Cam:
 
     def __init__(self):
 
         self.rtsp_url = "rtsp://admin:Grunding1234@192.168.1.100:554/Streaming/Channels/2"
-        # Kameranın RTSP URL'si. hata vermiyor "8000/554"
-        #self.username = "admin"  # Kullanıcı adı
-        #self.password = "Grunding1234"  # Şifre
+        #ip camera information
 
     def read_with_ai(self, ai):
 
-        # RTSP akışını almak için VideoCapture nesnesi oluşturun
+        
         video_capture = cv2.VideoCapture(self.rtsp_url, cv2.CAP_FFMPEG)
         video_capture.set(cv2.CAP_PROP_BUFFERSIZE, 0)
 
@@ -22,18 +20,18 @@ class Cam:
         while True:
             ret, frame = video_capture.read()
 
-            # ai frame'i gönder
+            
             ai.model_tespit(frame)
 
             if not ret:
-                print("Akış sonlandı.")
+                print("The stream has ended.")
                 break
 
-            # Alınan çerçeveyi işleyin veya gösterin
+            
             cv2.imshow('IP KAMERA', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
-        # Temizleme
+        
         video_capture.release()
         cv2.destroyAllWindows()
